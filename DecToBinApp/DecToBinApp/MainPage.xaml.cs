@@ -10,7 +10,7 @@ namespace DecToBinApp
 {
     public partial class MainPage : ContentPage
     {
-        public string DefaultMessageText { get; set; } = "Введите десятичное число в верхнее поле и нажмите кнопку для получения числа в другой системе счисления";
+        Strings strings = new Strings();
 
         public MainPage()
         {
@@ -36,7 +36,7 @@ namespace DecToBinApp
 
             if (String.IsNullOrEmpty(decText))
             {
-                ErrorLabel.Text = "Ошибка, Вы не ввели число";
+                MessageLabel.Text = "Ошибка, Вы не ввели число";
                 return;
             }
 
@@ -49,7 +49,7 @@ namespace DecToBinApp
                 }
                 catch (Exception)
                 {
-                    ErrorLabel.Text = "Ошибка, Ваше число не похоже на число...";
+                    MessageLabel.Text = "Ошибка, Ваше число не похоже на число...";
                     return;
                 }
 
@@ -64,12 +64,12 @@ namespace DecToBinApp
                 }
 
                 EditBinNumber.Text = binText;
-                
-                ErrorLabel.Text = DefaultMessageText;
+
+                MessageLabel.Text = strings.DefaultMessageText;
             }
             else
             {
-                ErrorLabel.Text = "Ошибка, Ваше число слишком большое";
+                MessageLabel.Text = "Ошибка, Ваше число слишком большое";
             }
         }
     }

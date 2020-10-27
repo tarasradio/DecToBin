@@ -3,6 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DecToBinApp.MainPage"
              xmlns:local="clr-namespace:DecToBinApp">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:Strings x:Key="Strings"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     
     <StackLayout>
         <Frame BackgroundColor="#2196F3" 
@@ -58,8 +63,8 @@
                 Margin="30,10"
                 Clicked="ConvertButton_Clicked"/>
 
-        <Label x:Name="ErrorLabel"
-               Text="Введите десятичное число в верхнее поле и нажмите кнопку для получения числа в другой системе счисления"
+        <Label x:Name="MessageLabel"
+               Text="{Binding Source={StaticResource Key=Strings}, Path=DefaultMessageText}"
                FontSize="16" 
                Padding="30,0,30,0"/>
     </StackLayout>
