@@ -17,11 +17,6 @@ namespace DecToBinApp
             InitializeComponent();
         }
 
-        private void ConvertButton_Clicked(object sender, EventArgs e)
-        {
-            Convert();
-        }
-
         private void EditDecNumber_TextChanged(object sender, TextChangedEventArgs e)
         {
             Convert();
