@@ -8,6 +8,15 @@
         <ResourceDictionary>
             <local:Strings x:Key="Strings"/>
         </ResourceDictionary>
+        <Style x:Key="labelStyle" TargetType="Label">
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="Title"/>
+            <Setter Property="Padding" Value="30,10,30,10"/>
+        </Style>
+        <Style x:Key="editorStyle" TargetType="Editor">
+            <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            <Setter Property="FontSize" Value="Title"/>
+        </Style>
     </ContentPage.Resources>
     
     <StackLayout>
@@ -21,38 +30,32 @@
         </Frame>
         
         <Label Text="Десятичное число"
-               HorizontalTextAlignment="Center"
-               FontSize="Title"
-               Padding="30,10,30,10"/>
+               Style="{StaticResource Key=labelStyle}"
+               />
         
         <Editor x:Name="EditDecNumber"
                 TextChanged="EditDecNumber_TextChanged"
                 Placeholder="Введите число..."
-                HorizontalOptions="FillAndExpand"
+                Style="{StaticResource Key=editorStyle}"
                 Keyboard="Numeric"
-                MaxLength="9"
-                FontSize="Title"/>
+                MaxLength="9"/>
         
         <Label Text="Двоичное число"
-               HorizontalTextAlignment="Center"
-               FontSize="Title"
-               Padding="30,10,30,10"/>
+               Style="{StaticResource Key=labelStyle}"
+               />
 
         <Editor x:Name="EditBinNumber"
                 Placeholder="Полученное число..."
-                HorizontalOptions="FillAndExpand"
-                FontSize="Title"
+                Style="{StaticResource Key=editorStyle}"
                 IsReadOnly="True"/>
         
         <Label Text="Шестнадцатиричное число"
-               HorizontalTextAlignment="Center"
-               FontSize="Title"
-               Padding="30,10,30,10"/>
+               Style="{StaticResource Key=labelStyle}"
+               />
 
         <Editor x:Name="EditHexNumber"
                 Placeholder="Полученное число..."
-                HorizontalOptions="FillAndExpand"
-                FontSize="Title"
+                Style="{StaticResource Key=editorStyle}"
                 IsReadOnly="True"/>
 
         <Label x:Name="MessageLabel"
