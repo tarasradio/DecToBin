@@ -49,6 +49,8 @@ namespace DecToBinApp
                 }
 
                 string binText = String.Empty;
+                
+                EditHexNumber.Text = decNumber.ToString("X");
 
                 while (decNumber > 0)
                 {
@@ -57,8 +59,7 @@ namespace DecToBinApp
                 }
 
                 EditBinNumber.Text = binText;
-                EditHexNumber.Text = decNumber.ToString("X");
-
+                
                 ErrorLabel.Text = "Введите десятичное число в верхнее поле и нажмите кнопку для получения двоичного числа";
             }
             else
