@@ -10,6 +10,8 @@ namespace DecToBinApp
 {
     public partial class MainPage : ContentPage
     {
+        public string DefaultMessageText { get; set; } = "Введите десятичное число в верхнее поле и нажмите кнопку для получения числа в другой системе счисления";
+
         public MainPage()
         {
             InitializeComponent();
@@ -63,7 +65,7 @@ namespace DecToBinApp
 
                 EditBinNumber.Text = binText;
                 
-                ErrorLabel.Text = "Введите десятичное число в верхнее поле и нажмите кнопку для получения двоичного числа";
+                ErrorLabel.Text = DefaultMessageText;
             }
             else
             {

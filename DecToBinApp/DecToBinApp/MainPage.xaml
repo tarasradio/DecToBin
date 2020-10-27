@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DecToBinApp.MainPage">
-
+             x:Class="DecToBinApp.MainPage"
+             xmlns:local="clr-namespace:DecToBinApp">
+    
     <StackLayout>
         <Frame BackgroundColor="#2196F3" 
                Padding="24" 
@@ -58,7 +59,7 @@
                 Clicked="ConvertButton_Clicked"/>
 
         <Label x:Name="ErrorLabel"
-               Text="Введите десятичное число в верхнее поле и нажмите кнопку для получения двоичного числа" 
+               Text="Введите десятичное число в верхнее поле и нажмите кнопку для получения числа в другой системе счисления"
                FontSize="16" 
                Padding="30,0,30,0"/>
     </StackLayout>
