@@ -30,8 +30,7 @@
         </Frame>
         
         <Label Text="Десятичное число"
-               Style="{StaticResource Key=labelStyle}"
-               />
+               Style="{StaticResource Key=labelStyle}"/>
         
         <Editor x:Name="EditDecNumber"
                 TextChanged="EditDecNumber_TextChanged"
@@ -41,8 +40,7 @@
                 MaxLength="9"/>
         
         <Label Text="Двоичное число"
-               Style="{StaticResource Key=labelStyle}"
-               />
+               Style="{StaticResource Key=labelStyle}"/>
 
         <Editor x:Name="EditBinNumber"
                 Placeholder="Полученное число..."
@@ -50,8 +48,7 @@
                 IsReadOnly="True"/>
         
         <Label Text="Шестнадцатиричное число"
-               Style="{StaticResource Key=labelStyle}"
-               />
+               Style="{StaticResource Key=labelStyle}"/>
 
         <Editor x:Name="EditHexNumber"
                 Placeholder="Полученное число..."

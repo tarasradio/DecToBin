@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DecToBinApp.GridPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+        </ResourceDictionary>
+        <Style x:Key="buttonStyle" TargetType="Button">
+            <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            <Setter Property="VerticalOptions" Value="FillAndExpand" />
+            <Setter Property="Margin" Value="5,5,5,5"/>
+            <Setter Property="FontSize" Value="64"/>
+            <Setter Property="Padding" Value="5,5,5,5"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="BorderWidth" Value="3"/>
+            <Setter Property="BorderColor" Value="DarkGray"/>
+        </Style>
+        <Style x:Key="defaultButtonStyle" TargetType="Button" BasedOn="{StaticResource buttonStyle}">
+            <Setter Property="BackgroundColor" Value="LightGray"/>
+        </Style>
+        <Style x:Key="oButtonStyle" TargetType="Button" BasedOn="{StaticResource buttonStyle}">
+            <Setter Property="BackgroundColor" Value="DarkBlue"/>
+        </Style>
+        <Style x:Key="xButtonStyle" TargetType="Button" BasedOn="{StaticResource buttonStyle}">
+            <Setter Property="BackgroundColor" Value="Red"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Visual="Material" VerticalOptions="Fill">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="120"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Text="X"
+                        Grid.Row="0" Grid.Column="0"
+                        Style="{StaticResource Key=xButtonStyle}"/>
+                <Button Text=""
+                        Grid.Row="0" Grid.Column="1"
+                        Style="{StaticResource Key=defaultButtonStyle}"/>
+                <Button Text="O"
+                        Grid.Row="0" Grid.Column="2"
+                        Style="{StaticResource Key=oButtonStyle}"/>
+                <Button Text=""
+                        Grid.Row="1" Grid.Column="0"
+                        Style="{StaticResource Key=defaultButtonStyle}"/>
+                <Button Text="X"
+                        Grid.Row="1" Grid.Column="1"
+                        Style="{StaticResource Key=xButtonStyle}"/>
+                <Button Text="O"
+                        Grid.Row="1" Grid.Column="2"
+                        Style="{StaticResource Key=oButtonStyle}"/>
+                <Button Text="O"
+                        Grid.Row="2" Grid.Column="0"
+                        Style="{StaticResource Key=oButtonStyle}"/>
+                <Button Text="O"
+                        Grid.Row="2" Grid.Column="1"
+                        Style="{StaticResource Key=oButtonStyle}"/>
+                <Button Text="X"
+                        Grid.Row="2" Grid.Column="2"
+                        Style="{StaticResource Key=xButtonStyle}"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
