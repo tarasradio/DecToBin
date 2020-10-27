@@ -11,25 +11,27 @@
         <Style x:Key="labelStyle" TargetType="Label">
             <Setter Property="HorizontalTextAlignment" Value="Center" />
             <Setter Property="FontSize" Value="Title"/>
+            <Setter Property="TextColor" Value="DarkBlue"/>
             <Setter Property="Padding" Value="30,10,30,10"/>
         </Style>
         <Style x:Key="editorStyle" TargetType="Editor">
             <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             <Setter Property="FontSize" Value="Title"/>
+            <Setter Property="Margin" Value="10,0,10,0"/>
         </Style>
     </ContentPage.Resources>
     
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" 
+    <StackLayout BackgroundColor="White">
+        <Frame BackgroundColor="DarkBlue" 
                Padding="24" 
                CornerRadius="0">
-            <Label Text="Dec to Bin Converter" 
+            <Label Text="Digits Converter" 
                    HorizontalTextAlignment="Center" 
                    TextColor="White" 
-                   FontSize="36"/>
+                   FontSize="30"/>
         </Frame>
         
-        <Label Text="Десятичное число"
+        <Label Text="10-e число:"
                Style="{StaticResource Key=labelStyle}"/>
         
         <Editor x:Name="EditDecNumber"
@@ -39,7 +41,7 @@
                 Keyboard="Numeric"
                 MaxLength="9"/>
         
-        <Label Text="Двоичное число"
+        <Label Text="2-е число:"
                Style="{StaticResource Key=labelStyle}"/>
 
         <Editor x:Name="EditBinNumber"
@@ -47,7 +49,7 @@
                 Style="{StaticResource Key=editorStyle}"
                 IsReadOnly="True"/>
         
-        <Label Text="Шестнадцатиричное число"
+        <Label Text="16-e число:"
                Style="{StaticResource Key=labelStyle}"/>
 
         <Editor x:Name="EditHexNumber"

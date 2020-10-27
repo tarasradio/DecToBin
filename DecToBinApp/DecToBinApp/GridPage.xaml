@@ -33,6 +33,7 @@
                     <RowDefinition Height="120"/>
                     <RowDefinition Height="120"/>
                     <RowDefinition Height="120"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -66,6 +67,12 @@
                 <Button Text="X"
                         Grid.Row="2" Grid.Column="2"
                         Style="{StaticResource Key=xButtonStyle}"/>
+                <Button Text="Новая игра"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="3"
+                        Style="{StaticResource Key=buttonStyle}"
+                        BackgroundColor="Green"
+                        FontSize="36"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>
