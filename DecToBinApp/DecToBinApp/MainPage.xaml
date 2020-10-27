@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DecToBinApp.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" 
+               Padding="24" 
+               CornerRadius="0">
+            <Label Text="Dec to Bin Converter" 
+                   HorizontalTextAlignment="Center" 
+                   TextColor="White" 
+                   FontSize="36"/>
+        </Frame>
+        
+        <Label Text="Десятичное число"
+               HorizontalTextAlignment="Center"
+               FontSize="Title"
+               Padding="30,10,30,10"/>
+        
+        <Editor x:Name="EditDecNumber"
+                TextChanged="EditDecNumber_TextChanged"
+                Placeholder="Введите число..."
+                HorizontalOptions="FillAndExpand"
+                Keyboard="Numeric"
+                MaxLength="9"
+                FontSize="Title"/>
+        
+        <Label Text="Двоичное число"
+               HorizontalTextAlignment="Center"
+               FontSize="Title"
+               Padding="30,10,30,10"/>
+
+        <Editor x:Name="EditBinNumber"
+                Placeholder="Полученное число..."
+                HorizontalOptions="FillAndExpand"
+                FontSize="Title"
+                IsReadOnly="True"/>
+
+        <Button x:Name="ConvertButton"
+                Text="Конвертировать"
+                FontSize="Title"
+                BackgroundColor="Red"
+                TextColor="White"
+                FontAttributes="Bold"
+                Margin="30,10"
+                Clicked="ConvertButton_Clicked"/>
+
+        <Label x:Name="ErrorLabel"
+               Text="Введите десятичное число в верхнее поле и нажмите кнопку для получения двоичного числа" 
+               FontSize="16" 
+               Padding="30,0,30,0"/>
+    </StackLayout>
+
+</ContentPage>
