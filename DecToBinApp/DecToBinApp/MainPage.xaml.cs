@@ -27,6 +27,9 @@ namespace DecToBinApp
 
         private void Convert()
         {
+            EditBinNumber.Text = String.Empty;
+            EditHexNumber.Text = String.Empty;
+
             string decText = EditDecNumber.Text;
 
             if (String.IsNullOrEmpty(decText))
